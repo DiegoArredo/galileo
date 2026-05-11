@@ -24,6 +24,14 @@ galileo-project/
 
 ## ⚡ Instalación
 
+### Variables de Entorno
+Copia el archivo de ejemplo y configura tus variables:
+```bash
+cp .env.example .env
+# Edita .env con tus valores (credenciales, API keys, etc.)
+```
+Ver [.env.example](./.env.example) para referencia de todas las variables disponibles.
+
 ### Frontend
 ```bash
 cd frontend

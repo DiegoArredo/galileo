@@ -1,17 +1,20 @@
-import './App.css';
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Login from './Login';
-import Register from './Register';
+import Main from "./Main/Main";
+import Checkout from "./checkout/Checkout";
+import Dashboard from "./dashboard/Dashboard";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Identify from "./identify/Identify";
+import Cart from "./shopingcart/Cart";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Navigate to="/login" />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/" element={<Main/>} />
+          <Route path="/join/*" element={<Identify />} />
+          <Route path="/dashboard/*" element={<Dashboard />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/carrito" element={<Cart/>} />
         </Routes>
       </div>
     </Router>

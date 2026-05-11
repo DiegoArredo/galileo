@@ -15,11 +15,11 @@ import { WebpayModule } from './webpay/webpay.module';
 @Module({
   imports: [TypeOrmModule.forRoot({
     type: 'postgres',
-    host: 'localhost',
-    port: 5432,
-    username: 'postgres',
-    password: 'aparatos',
-    database: 'carrito',
+    host: process.env.CART_DATABASE_HOST || 'localhost',
+    port: parseInt(process.env.CART_DATABASE_PORT || '5432'),
+    username: process.env.CART_DATABASE_USER || 'postgres',
+    password: process.env.CART_DATABASE_PASSWORD || '',
+    database: process.env.CART_DATABASE_NAME || 'carrito',
     entities: [Carrito, ProductoCarrito],
     synchronize: true,
   }), 

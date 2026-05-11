@@ -8,7 +8,7 @@ export class MessageService {
   private groqToken: string;
 
   constructor() {
-    this.groqToken = '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'; // Reemplaza con tu token de GroqCloud
+    this.groqToken = process.env.GROQ_API_KEY || ''; // Lee de variables de entorno
   }
 
   // Método para procesar el mensaje

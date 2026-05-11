@@ -3,11 +3,12 @@ package utils
 import (
     "net/smtp"
     "fmt"
+    "os"
 )
 
 func SendEmail(to string, subject string, body string) error {
     from := "galileoelearning@gmail.com"
-    password := "badx nfhp rvfe gpgj"  // Tu contraseña de aplicación
+    password := os.Getenv("SMTP_PASSWORD")  // Lee de variables de entorno
 
     smtpServer := "smtp.gmail.com"
     smtpPort := "587"

@@ -11,9 +11,6 @@
 
 # Dependencies
 node_modules/
-package-lock.json
-yarn.lock
-go.sum
 
 # Build artifacts
 dist/
